@@ -28,7 +28,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Teacher.findAll", query = "SELECT t FROM Teacher t")
     , @NamedQuery(name = "Teacher.findById", query = "SELECT t FROM Teacher t WHERE t.id = :id")
     , @NamedQuery(name = "Teacher.findByName", query = "SELECT t FROM Teacher t WHERE t.name = :name")})
-public class Teacher implements Serializable { // Seruazible krävs för data över nätet
+public class Teacher implements Serializable { // Serializable krävs för data över nätet
 
     private static final long serialVersionUID = 1L; // kontroll: för sserialiseringen
     @Id
