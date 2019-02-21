@@ -42,11 +42,10 @@ public class DaoRest {
     }
 
     @PUT   // Läsa in via 
-    @Path("{id}")   //variabel, siffra på slutet av länken
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    public void edit(@PathParam("id") Integer id, Teacher t) {    // tar emot en lärare, konsumerae xml/json
-        //anropar tdao
-        tdao.editTeacher(t);
+    public void edit(Teacher t) {   // tar emot en lärare, konsumerae xml/json
+        tdao.editTeacher(t);        // anropar tdao
+
     }
 
     @GET
